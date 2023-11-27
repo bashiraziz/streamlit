@@ -8,8 +8,8 @@ st.title('Project Percent Complete and Revenue to be Recognized')
 # Computaion formulas
 formulas_defined = """
 <div style="border: 2px solid #336699; padding: 10px; border-radius: 5px;">
-    <p>Percent Complete fomula: ITD Cost / Project Budget.</p>
-    <p>Revenue to be Recognized formuls: Funded Value * Percent Complete.</p>
+    <p><strong>Percent Complete fomula: ITD Cost / Project Budget.</strong></p>
+    <p><strong>Revenue to be Recognized formula: Funded Value * Percent Complete.</strong></p>
 </div>
 """
 # Describe the formulas
