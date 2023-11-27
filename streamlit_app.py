@@ -2,10 +2,8 @@
 import streamlit as st
 #import locale
 
-
-
 # App title
-st.title('Project Percent Complete  and Revenue Calculator')
+st.title('Project Percent Complete  and Revenue to be Recognized Calculator')
 
 # Computaion formulas
 formulas_defined = """
