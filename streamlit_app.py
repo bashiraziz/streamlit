@@ -6,7 +6,19 @@ import streamlit as st
 
 # App title
 st.title('Project Percent Complete  and Revenue Calculator')
- 
+
+# Computaion formulas
+formulas_defined = """
+<div style="border: 2px solid #336699; padding: 10px; border-radius: 5px;">
+    <p>Percent Complete fomula: ITD Cost / Project Budget.</p>
+    <p>Revenue to be Recognized formuls: Funded Value * Percent Complete.</p>
+</div>
+"""
+# Describe the formulas
+st.markdown(formulas_defined, unsafe_allow_html=True)
+st.text("")
+st.text("")
+
 # User to enter funded contract value
 project_funded_value = st.number_input(
      label = "Project Funded Value",
@@ -40,14 +52,14 @@ def compute_percent_complete():
     return percent_complete
 
 def compute_revenue():
-    revenue = project_funded_value * percent_complete
+    revenue = project_funded_value * percent_complete / 100
     return revenue
 
-def format_amount(res: int) -> str:
+#def format_amount(res: int) -> str:
     
     #  Format to two decimal digits currency as string
-    locale.setlocale(locale.LC_ALL, "en_CA.UTF-8")
-    return locale.currency(res, grouping=True)
+    #locale.setlocale(locale.LC_ALL, "en_CA.UTF-8")
+    #return locale.currency(res, grouping=True)
 
 
 # When button is pressed
