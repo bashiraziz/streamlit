@@ -35,7 +35,7 @@ project_budget = st.number_input(
 percent_complete = 0
 
 #compute percentage complete
-def compute_percent_complete():
+def compute_percent_complete(project_budget = project_budget, ctd_cost = ctd_cost   ):
     try:
         percent_complete = ctd_cost / project_budget
         if(percent_complete <= 0 ):
