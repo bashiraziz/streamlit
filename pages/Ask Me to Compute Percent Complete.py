@@ -123,7 +123,8 @@ def run_conversation(main_request: str)->str:
         return second_response.choices[0].message.content
     
 #st.text("Percent Complete: " + str(percent_complete))
-user_question = st.text_input("Enter your question here")
+user_question = st.text_input("Enter your question here",
+                              "What is the percent complete of the project if the project cost is 3000 and project budget if 8000?")
 if st.button('Calculate Percent Complete'):
     response = run_conversation(user_question)
     st.text("Response: " + response)
