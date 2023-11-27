@@ -3,7 +3,7 @@ import streamlit as st
 #import locale
 
 # App title
-st.title('Project Percent Complete & Revenue to be Recognized')
+st.title('Project Percent Complete and Revenue to be Recognized')
 
 # Computaion formulas
 formulas_defined = """
