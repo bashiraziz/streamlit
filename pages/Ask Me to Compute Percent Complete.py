@@ -13,7 +13,8 @@ from dotenv import load_dotenv, find_dotenv
 
 # Set the page title
 st.set_page_config(page_title="Custom Page Title")
-st.write("# Call to API to get data")
+st.header("Provided by of Bashir Aziz")
+st.write("# Call to API to calculate Project Percent Complete")
 
 
 _ : bool = load_dotenv(find_dotenv()) # read local .env file
@@ -21,14 +22,14 @@ load_dotenv()
 
 client : OpenAI = OpenAI()
 
-ctd_cost = 2000
-project_budget = 8000
-project_funded_value = 10000
+ctd_cost = ""
+project_budget = ""
+project_funded_value = ""
 
 def compute_percent_complete(ctd_cost=None, project_budget=None):
     try:
         if project_budget is None or project_budget <= 0:
-            raise ValueError("I can compute the project percent compute if in your question below you provide me with project cost and project budget greater tha zero")
+            raise ValueError('I can compute the project percent compute if in your question below you provide me with project cost and project budget greater tha zero. For Example: "What is the percent complete of the project if the project cost is 3000 and project budget if 8000?"')
         
         percent_complete = ctd_cost / project_budget
         if percent_complete <= 0:
@@ -123,7 +124,7 @@ def run_conversation(main_request: str)->str:
         return second_response.choices[0].message.content
     
 #st.text("Percent Complete: " + str(percent_complete))
-user_question = st.text_input("Enter your question here",
+user_question = st.text_input("Enter your questions below with project cost and project budget greater than zero",
                               "What is the percent complete of the project if the project cost is 3000 and project budget if 8000?")
 if st.button('Calculate Percent Complete'):
     response = run_conversation(user_question)
