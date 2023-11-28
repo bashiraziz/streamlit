@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 #import streamlit_app as sa
-from openai.types.chat.chat_completion import ChatCompletionMessage, ChatCompletion
+from openai.types.chat.chat_completion import ChatCompletionMessage
 # from openai.types.chat.chat_completion import ChatCompletionMessageParam, ChatCompletionMessageParam
 from openai import OpenAI
 import json
