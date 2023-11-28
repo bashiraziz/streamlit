@@ -1,3 +1,3 @@
-import streamlit as s
+import streamlit as st
 from openai import OpenAI
-st.header("Provided by of Bashir Aziz")
+st.title("Provided by of Bashir Aziz")
