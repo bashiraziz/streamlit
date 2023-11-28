@@ -29,7 +29,7 @@ project_funded_value = ""
 def compute_percent_complete(ctd_cost=None, project_budget=None):
     try:
         if project_budget is None or project_budget <= 0:
-            raise ValueError('I can compute the project percent compute if in your question below you provide me with project cost and project budget greater tha zero. For Example: "What is the percent complete of the project if the project cost is 3000 and project budget if 8000?"')
+            raise ValueError('I can compute the project percent complete for you. In field below provide me with the project ITD cost and project budget greater tha zero. For Example: "What is the percent complete of the project if the project cost is 3000 and project budget if 8000?"')
         
         percent_complete = ctd_cost / project_budget
         if percent_complete <= 0:
