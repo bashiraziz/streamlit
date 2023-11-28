@@ -39,8 +39,11 @@ if st.button("Get Response"):
         response = get_openai_response(user_question)
 
         # Display the response
-        st.write("OpenAI Response:")
-        st.write(response)
+        st.write(f"Answer: {response}")
+    
+    # Clear the input field after the button is pressed
+        user_question = ""  # Set the input field value to an empty string
+        
     else:
         st.warning("Please enter a question.")
 
