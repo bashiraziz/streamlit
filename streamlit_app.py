@@ -2,9 +2,6 @@ import streamlit as st
 from openai import OpenAI
 st.title("Provided by of Bashir Aziz")
 
-note= ("""All three pages will provided similar response 
-         1. Compute Percent Complete page does not make a call to OpenAI API
-         2. Ask me to Compute Percent Complete, makes a call to OpenAI API and uses a custum function to compute the percent complete
-         3. Ask me a Question page makes a call to OpenAI API to answer a question and provides a response received from OpenAI API""")
+note= (''' All three pages will provided similar response \n 1. "Ask me a Question" page makes a call to OpenAI API to get an answer to a question and provides the response received from OpenAI. \n 2. "Ask me to Compute Percent Complete" page makes a call to OpenAI API and OpenAI uses a "custom in-house built" function sent with the call to compute the percent complete. \n3. "Compute Percent Complete" page does not make a call to OpenAI API and uses a custom in-house function to compute percent complete. \n''')
 
 st.markdown(note)
